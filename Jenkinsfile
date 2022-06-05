@@ -31,7 +31,7 @@ pipeline {
 
                 sh '''
                     mkdir -p ~/workspace/ansible-project/ansible-example-jenkins/files/certs
-                    cd ~/workspace/ansible-project/files/certs
+                    cd ~/workspace/ansible-project/ansible-example-jenkins/files/certs
                     openssl req -x509 -newkey rsa:4096 -keyout server.key -out server.crt -days 365 --nodes -subj '/C=GR/O=myorganization/OU=it/CN=myorg.com'
                 '''
             }
