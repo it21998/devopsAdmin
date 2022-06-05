@@ -43,7 +43,7 @@ pipeline {
                         pwd
                         echo $WORKSPACE
 
-                        ansible-playbook -i ~/workspace/ansible-project/hosts.yml -l database ~/workspace/ansible-project/playbooks/postgres.yml
+                        ansible-playbook -i ~/workspace/ansible-project/hosts.yml -l deployment ~/workspace/ansible-project/playbooks/postgres.yml
                         '''
             }
             }
@@ -52,7 +52,7 @@ pipeline {
             steps{
                 sshagent (credentials: ['ssh-deploy']) {
                     sh '''
-                        ansible-playbook -i ~/workspace/ansible-project/hosts.yml -l deploymentservers ~/workspace/ansible-project/playbooks/django-project-install.yml
+                        ansible-playbook -i ~/workspace/ansible-project/hosts.yml -l deployment ~/workspace/ansible-project/playbooks/django-project-install.yml
                     '''
                 }
 
