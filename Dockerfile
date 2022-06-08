@@ -16,6 +16,4 @@ RUN  python manage.py collectstatic --noinput
 EXPOSE 8000/tcp
 
 # Tell what to do when it starts as a container
-RUN chmod +x /app/docker-entrypoint.sh
-
-ENTRYPOINT [ "/app/docker-entrypoint.sh" ]
+CMD ["gunicorn", "myproject.wsgi:application", "--bind", "0.0.0.0:8000"]
