@@ -9,7 +9,7 @@ COPY ./requirements.txt ./
 
 RUN pip install -r requirements.txt
 # Copy main.py file
-COPY ./myproject ./
+COPY ./student_management ./
 
 RUN  python manage.py collectstatic --noinput
 
