@@ -9,7 +9,7 @@ COPY ./requirements.txt ./
 
 RUN pip install -r requirements.txt
 # Copy main.py file
-COPY ./student_management ./
+COPY ./devopsAdmin ./
 
 RUN  python manage.py collectstatic --noinput
 
