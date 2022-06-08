@@ -6,9 +6,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_USER=myprojectuser
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=myproject
+      - POSTGRES_USER= myprojectuser
+      - POSTGRES_PASSWORD= password
+      - POSTGRES_DB= myproject
     volumes:
       - dj_postgres_data:/var/lib/postgresql/data/
     healthcheck:
