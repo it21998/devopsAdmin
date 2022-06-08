@@ -31,8 +31,8 @@ services:
     volumes:
       - static_volume:/app/static
     depends_on:
-      db:
-        condition: service_healthy
+      - db
+        
   nginx:
     image: nginx:latest
     volumes:
