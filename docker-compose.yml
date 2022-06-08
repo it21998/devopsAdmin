@@ -12,9 +12,7 @@ services:
       - "8000:8000"
     volumes:
       - static_volume:/app/static
-    depends_on:
-      db:
-        condition: service_healthy
+    
   nginx:
     image: nginx:latest
     volumes:
