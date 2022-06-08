@@ -12,6 +12,7 @@ RUN pip install -r requirements.txt
 COPY ./student_management ./
 
 RUN  python manage.py collectstatic --noinput
+WORKDIR /app/student_management
 RUN  python manage.py migrate
 
 
